@@ -1,0 +1,622 @@
+//Graph written from NetworkX
+
+CREATE (AlmondButterAndJellyGreenSmoothie:Recipe {
+	Description: "This is a sweet take on a child's classic sandwich filled with fresh fruit and leafy greens. We love almond butter and it's mighty tasty in this green smoothie! Spinach and grapes are packed with antioxidants and phytonutrients and the Banana and almond milk make it nice and creamy.",
+	Servings: "2",
+	UniqueId: "AlmondButterAndJellyGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/green-smoothie-almond-butter-and-jelly"})
+
+CREATE (Rasberry:Fruit {
+	UniqueId: "Rasberry"})
+
+CREATE (StrawberryPeachRefresherGreenSmoothie:Recipe {
+	Description: "This smoothie uses the mild tasting green bok choy which is known as a cancer-fighting cabbage because of it۪s good source of beta carotene. In just one 9 calorie cup of bok choy you receive 63% vitamin A 52% vitamin C and 8% calcium of your recommended daily value. Recipe Submitted by Yvonne R for our weekly Feature Friday contest.",
+	Servings: "2",
+	UniqueId: "StrawberryPeachRefresherGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/strawberry-peach-refresher"})
+
+CREATE (SweetPotato:Root {
+	UniqueId: "SweetPotato"})
+
+CREATE (HealingCranberryCleanserGreenSmoothie:Recipe {
+	Description: "Cranberries are an antioxidant powerhouse so get them fresh during the fall and winter. By drinking this Healing Cranberry Cleanser green smoothie with cranberry your body will experience the immediate effects of natural energy. Get your healthy dose of vitamin C and fiber in this healing green smoothie!",
+	Servings: "2",
+	UniqueId: "HealingCranberryCleanserGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/healing-cranberry-cleanser"})
+
+CREATE (PomegranateCitrusPunchGreenSmoothie:Recipe {
+	Description: "The Pomegranate Citrus Punch green smoothie is a great energy and immunity booster. Once you master the art of seeding a pomegranate you should celebrate with this antioxidant-rich green smoothie.",
+	Servings: "2",
+	UniqueId: "PomegranateCitrusPunchGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/pomegranate-citrus-punch"})
+
+CREATE (AlmondMilk:Base {
+	UniqueId: "AlmondMilk"})
+
+CREATE (honey:Sweetener {
+	UniqueId: "honey"})
+
+CREATE (Lime:Fruit {
+	UniqueId: "Lime"})
+
+CREATE (Pear:Fruit {
+	UniqueId: "Pear"})
+
+CREATE (Cranberries:Fruit {
+	UniqueId: "Cranberries"})
+
+CREATE (CucumberPeeled:Fruit {
+	UniqueId: "CucumberPeeled"})
+
+CREATE (Spinach:Green {
+	UniqueId: "Spinach"})
+
+CREATE (CilantroLimeadeGreenSmoothie:Recipe {
+	Description: "",
+	Servings: "2",
+	UniqueId: "CilantroLimeadeGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/cilantro-limeade"})
+
+CREATE (Cilantro:Herb {
+	UniqueId: "Cilantro"})
+
+CREATE (Oranges:Fruit {
+	UniqueId: "Oranges"})
+
+CREATE (Kale:Green {
+	UniqueId: "Kale"})
+
+CREATE (StrawberryAndMintPopsicle:Recipe {
+	Description: "Enjoy this strawberry mint and spinach green smoothie popsicle recipe. Did you know that 8 Strawberry have more vitamin C than an orange? They are packed with vitamins fiber and high-level antioxidants and a great source of manganese and potassium. Mint is full of vitamin A and vitamin C fiber folate iron vitamin B2 and copper.",
+	Servings: "4",
+	UniqueId: "StrawberryAndMintPopsicle",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/strawberry-and-mint-popsicle"})
+
+CREATE (Raspberries:Fruit {
+	UniqueId: "Raspberries"})
+
+CREATE (Grapes:Fruit {
+	UniqueId: "Grapes"})
+
+CREATE (FreeRadicalFightingSuperGreenSmoothie:Recipe {
+	Description: "Try this Free Radical Fighting Super Smoothie once you've moved beyond the beginning stages of green smoothies. Cantaloupes are a rich source of vitamin A (as beta-carotene) and vitamin C which are important immunity and antioxidant vitamins. They also contain good levels of B vitamins and vitamin K. Blueberry rank the highest for antioxidants when it comes to fruit. And these tiny berries are full of vitamin C and fiber. Mint helps soothe your stomach and stimulates digestion of fats. Let's blend breakfast together!",
+	Servings: "2",
+	UniqueId: "FreeRadicalFightingSuperGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/free-radical-fighting-super-smoothie"})
+
+CREATE (Lemon:Fruit {
+	UniqueId: "Lemon"})
+
+CREATE (BokChoy:Green {
+	UniqueId: "BokChoy"})
+
+CREATE (Peache:Fruit {
+	UniqueId: "Peache"})
+
+CREATE (CranberryKaleCoolerGreenSmoothie:Recipe {
+	Description: "Give your taste buds a run for their money with this tangy citrus Cranberry Kale Cooler green smoothie recipe chock full of vitamin C and antioxidants. Recipe submitted by Juli Y.",
+	Servings: "2",
+	UniqueId: "CranberryKaleCoolerGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/cranberry-kale-cooler"})
+
+CREATE (avocado:Fruit {
+	UniqueId: "avocado"})
+
+CREATE (Blueberry:Fruit {
+	UniqueId: "Blueberry"})
+
+CREATE (Cantaloupe:Fruit {
+	UniqueId: "Cantaloupe"})
+
+CREATE (Peaches:Fruit {
+	UniqueId: "Peaches"})
+
+CREATE (OrangeJuice:Base {
+	UniqueId: "OrangeJuice"})
+
+CREATE (Water:base {
+})
+
+CREATE (Cantaloupe-GrapeSweetnessGreenSmoothie:Recipe {
+	Description: "Try this green smoothie with coconut oil for an extra nutritional boost of "good" fats to help lower cholesterol. Recipe Submitted by Joy W.",
+	Servings: "2",
+	UniqueId: "Cantaloupe-GrapeSweetnessGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/cantaloupe-grape"})
+
+CREATE (MangoGingerImmuneSupportGreenSmoothie:Recipe {
+	Description: "Enjoy this immune boosting mango ginger green smoothie chock full of green vegetables and low in sugar. Did you know that ginger clears sinuses and soothes a sensitive stomach? Recipe submitted by Gregory Y.",
+	Servings: "2",
+	UniqueId: "MangoGingerImmuneSupportGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/mango-ginger-immune-support"})
+
+CREATE (SPASkinCleanseGreenSmoothie:Recipe {
+	Description: "Get a lot of bang for your blend with this green smoothie. Avocado has a significant portion of healthy fats and vitamin E while the coconut water is like nature's gatorade hydrating and regenerating your tissue.۝ By gulping natural skin boosting ingredients in this green smoothie and applying external moisturizer (Jen's favorite is unrefined coconut oil) your skin should be glowing in no time.",
+	Servings: "2",
+	UniqueId: "SPASkinCleanseGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/spa-skin-cleanse"})
+
+CREATE (CoconutWater:Base {
+	UniqueId: "CoconutWater"})
+
+CREATE (CoconutFlakes:Booster {
+	UniqueId: "CoconutFlakes"})
+
+CREATE (StrawberryBananaBlueberryGreenSmoothie:Recipe {
+	Description: "Oh this smoothie is a good one! It's full of iron potassium vitamin C and antioxidants just to name a few. You can swap the orange juice for a navel orange (just peel it first!). We often add olive leaf extract echinacea and elderberry extract which are great all natural extracts to boost the immune system and fight off infection. Read the bottles for serving measurements and add to your smoothie before blending.",
+	Servings: "2",
+	UniqueId: "StrawberryBananaBlueberryGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/strawberry-banana-blueberry"})
+
+CREATE (LimeJuice:Fruit {
+	UniqueId: "LimeJuice"})
+
+CREATE (CacaoPowder:Booster {
+	UniqueId: "CacaoPowder"})
+
+CREATE (Cilantro-MangoDetoxGreenSmoothie:Recipe {
+	Description: "Enjoy this cilantro-based green smoothie which is a great way to help cleanse your body of icky toxins.",
+	Servings: "2",
+	UniqueId: "Cilantro-MangoDetoxGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/cilantro-mango-detox"})
+
+CREATE (CoconutMilk:Base {
+	UniqueId: "CoconutMilk"})
+
+CREATE (GroundNutmeg:Booster {
+	UniqueId: "GroundNutmeg"})
+
+CREATE (̱PinaColadaGreenSmoothie:Recipe {
+	Description: "Get an early start on summer with this tropical island Pi̱a Colada green smoothie. The fresh pineapple and almond milk make this smoothie creamy and sweet almost like dessert. Recipe submitted by Tiffany I.",
+	Servings: "2",
+	UniqueId: "̱PinaColadaGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/pina-colada"})
+
+CREATE (Almond:Booster {
+	UniqueId: "Almond"})
+
+CREATE (Avocado:Fruit {
+	UniqueId: "Avocado"})
+
+CREATE (Strawberry:Fruit {
+	UniqueId: "Strawberry"})
+
+CREATE (Water:Base {
+	UniqueId: "Water"})
+
+CREATE (CoconutOil:Booster {
+	UniqueId: "CoconutOil"})
+
+CREATE (BloodOrange:Fruit {
+	UniqueId: "BloodOrange"})
+
+CREATE (Parsley:Herb {
+	UniqueId: "Parsley"})
+
+CREATE (ThanksgivingInYourMouthGreenSmoothie:Recipe {
+	Description: "This is what I am talking about! Thanksgiving in your Mouth green smoothie is the next best thing to a pumpkin spiced latte... and WAY healthier. Serve with a dash of nutmeg on top (mine was more like a spoonful of nutmeg...and it was so gooooood). Happy fall to you!",
+	Servings: "2",
+	UniqueId: "ThanksgivingInYourMouthGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/thanksgiving-in-your-mouth"})
+
+CREATE (SunshineInAJarGreenSmoothie:Recipe {
+	Description: "Try this FullyRaw Pineapple Orange Collard/Spinach Smoothie as an ultimate fuel source! This recipe is a natural sunshine in a jar that feeds your body real energy! Recipe Submitted by Kristina @ FullyRaw.",
+	Servings: "1",
+	UniqueId: "SunshineInAJarGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/sunshine-in-a-jar"})
+
+CREATE (NavelOrangesJuice:Fruit {
+	UniqueId: "NavelOrangesJuice"})
+
+CREATE (Pineapple:Fruit {
+	UniqueId: "Pineapple"})
+
+CREATE (Avo-BananaKaleGreenSmoothie:Recipe {
+	Description: "We are lovers of all things leafy green especially kale. And this extremely creamy green smoothie is no exception.",
+	Servings: "2",
+	UniqueId: "Avo-BananaKaleGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/avo-banana-kale"})
+
+CREATE (LemonJuice:Fruit {
+	UniqueId: "LemonJuice"})
+
+CREATE (Carrot:Root {
+	UniqueId: "Carrot"})
+
+CREATE (BerryProteinBashGreenSmoothie:Recipe {
+	Description: "Give yourself a protein boost with this yummy Berry Protein Bash green smoothie. Protein burns slower than carbohydrates so adding it to smoothies helps prevent blood sugar spikes and helps prevent hunger pains. And it۪s also great if you are working towards a flat belly or building muscles. Yes the majority of us are on a mission to get those firm abs back and drinking a protein-rich smoothie after your work-outs is the perfect formula.",
+	Servings: "2",
+	UniqueId: "BerryProteinBashGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/berry-protein-bash"})
+
+CREATE (Collards:Green {
+	UniqueId: "Collards"})
+
+CREATE (Mint:Herb {
+	UniqueId: "Mint"})
+
+CREATE (PomegranateSeeds:Fruit {
+	UniqueId: "PomegranateSeeds"})
+
+CREATE (Ginger:Booster {
+	UniqueId: "Ginger"})
+
+CREATE (PeachCoconutDreamGreenSmoothie:Recipe {
+	Description: "Enjoy this mildly sweet Peach Coconut Dream green smoothie perfect for those watching their sugar intake. If you want it sweeter feel free to add a banana which also adds more potassium.",
+	Servings: "2",
+	UniqueId: "PeachCoconutDreamGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/peach-coconut-dream"})
+
+CREATE (Celery:Green {
+	UniqueId: "Celery"})
+
+CREATE (ASweetPearGreenSmoothie:Recipe {
+	Description: "Pears are a low-calorie fruit packed with fiber folic acid vitamin A and C. A Sweet Pear green smoothie recipe helps keep you fuller longer as well as helps your body heal quickly with extra support for your hair skin and nails. And adding cinnamon to your daily meal plan regulates your blood sugar levels reduces harmful cholesterol and sends a sweet boost to your metabolism.",
+	Servings: "2",
+	UniqueId: "ASweetPearGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/sweet-pear"})
+
+CREATE (CranberryJuice:Base {
+	UniqueId: "CranberryJuice"})
+
+CREATE (AlmondButter:Booster {
+	UniqueId: "AlmondButter"})
+
+CREATE (ChocolateCoveredCherryGreenSmoothie:Recipe {
+	Description: "This antioxidant-packed green smoothie is a healthy indulgence that will satisfy any sweet tooth.",
+	Servings: "2",
+	UniqueId: "ChocolateCoveredCherryGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/chocolate-covered-cherry-smoothie"})
+
+CREATE (Apple:Fruit {
+	UniqueId: "Apple"})
+
+CREATE (PineappleKaleCoconutOilGreenSmoothie:Recipe {
+	Description: "Try this nutrient-packed green smoothie with fresh cut pineapple kale and coconut oil. Coconut oil has some amazing health benefits such as increasing metabolism and endurance which is great if you workout or are running after little ones all day.",
+	Servings: "2",
+	UniqueId: "PineappleKaleCoconutOilGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/pineapple-kale-coconut-oil"})
+
+CREATE (Beginner'sLuckWithTopsGreenSmoothie:Recipe {
+	Description: "We are lovers of all things leafy green especially spinach. And this extremely creamy green smoothie is no exception.",
+	Servings: "2",
+	UniqueId: "Beginner'sLuckWithTopsGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/beginners-luck-with-tops"})
+
+CREATE (Mango:Fruit {
+	UniqueId: "Mango"})
+
+CREATE (KiwiStrawberryTwistGreenSmoothie:Recipe {
+	Description: "Get adventurous with your green smoothies by rotating the greens you put in it (which is a great way to avoid alkaloid build-up.) Strawberry kiwi and fresh oranges give this green smoothie a sweet vitamin C boost.",
+	Servings: "2",
+	UniqueId: "KiwiStrawberryTwistGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/kiwi-strawberry-twist"})
+
+CREATE (KiwiBerryPunchGreenSmoothie:Recipe {
+	Description: "Berries are naturally sweet immunity boosters low-calorie and full of antioxidants. Kiwi is packed with vitamin C and an amazing fat-burning citrus fruit. We always keep several bags of frozen berries in the freezer which is perfect for this recipe.",
+	Servings: "2",
+	UniqueId: "KiwiBerryPunchGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/kiwi-berry-punch"})
+
+CREATE (BerryCherryJubileeGreenSmoothie:Recipe {
+	Description: "With the sweet combination of cherries and mixed berries this Berry Cherry Jubilee recipe is packed with disease-fighting antioxidants fiber and vitamin C. Keep calm and get your green smoothie on!",
+	Servings: "2",
+	UniqueId: "BerryCherryJubileeGreenSmoothie",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/berry-cherry-jubilee"})
+
+CREATE (Cherries:Fruit {
+	UniqueId: "Cherries"})
+
+CREATE (GroundCinnamon:Booster {
+	UniqueId: "GroundCinnamon"})
+
+CREATE (Beginner'sLuck:Recipe {
+	Description: "The Beginner's Luck Green Smoothie is a great starter smoothie for beginners. It's full of iron potassium and vitamins galore and tastes like a tropical treat from all the island fruit. So head to the grocery store now and give this smoothie a try. We have a feeling you will be pleasantly surprised.",
+	Servings: "2",
+	UniqueId: "Beginner'sLuck",
+	SourceUrl: "http://simplegreensmoothies.com/Recipes/beginners-luck"})
+
+CREATE (Banana:Fruit {
+	UniqueId: "Banana"})
+
+CREATE (Grape:Fruit {
+	UniqueId: "Grape"})
+
+CREATE (Kiwi:Fruit {
+	UniqueId: "Kiwi"})
+
+CREATE (Cinnamon:Booster {
+	UniqueId: "Cinnamon"})
+
+CREATE (Rasberry)-[:IN {quantity: "0.5cups"}]->(KiwiBerryPunchGreenSmoothie)
+
+CREATE (SweetPotato)-[:IN {quantity: "1cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "1.5cups"}]->(̱PinaColadaGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "2cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "2cups"}]->(StrawberryPeachRefresherGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "2cups"}]->(AlmondButterAndJellyGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "2cups"}]->(ChocolateCoveredCherryGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "2cups"}]->(BerryProteinBashGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "2cups"}]->(ASweetPearGreenSmoothie)
+
+CREATE (AlmondMilk)-[:IN {quantity: "1cups"}]->(Cantaloupe-GrapeSweetnessGreenSmoothie)
+
+CREATE (honey)-[:IN {quantity: "0.25"}]->(StrawberryAndMintPopsicle)
+
+CREATE (Lime)-[:IN {quantity: "1"}]->(CilantroLimeadeGreenSmoothie)
+
+CREATE (Lime)-[:IN {quantity: "1"}]->(CranberryKaleCoolerGreenSmoothie)
+
+CREATE (Pear)-[:IN {quantity: "4"}]->(ASweetPearGreenSmoothie)
+
+CREATE (Cranberries)-[:IN {quantity: "1cups"}]->(HealingCranberryCleanserGreenSmoothie)
+
+CREATE (CucumberPeeled)-[:IN {quantity: "1"}]->(MangoGingerImmuneSupportGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "1.5cups"}]->(StrawberryAndMintPopsicle)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(̱PinaColadaGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(PeachCoconutDreamGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(SPASkinCleanseGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(AlmondButterAndJellyGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(ChocolateCoveredCherryGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2 cups"}]->(PomegranateCitrusPunchGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(Cantaloupe-GrapeSweetnessGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(FreeRadicalFightingSuperGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(KiwiBerryPunchGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "1.5cups"}]->(CilantroLimeadeGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(Beginner'sLuck)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(BerryCherryJubileeGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "1.5cups"}]->(Beginner'sLuckWithTopsGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "1cups"}]->(SunshineInAJarGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "1.5cups"}]->(Cilantro-MangoDetoxGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(BerryProteinBashGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(ASweetPearGreenSmoothie)
+
+CREATE (Spinach)-[:IN {quantity: "2cups"}]->(StrawberryBananaBlueberryGreenSmoothie)
+
+CREATE (Cilantro)-[:IN {quantity: "0.5cups"}]->(CilantroLimeadeGreenSmoothie)
+
+CREATE (Cilantro)-[:IN {quantity: "0.5cups"}]->(Cilantro-MangoDetoxGreenSmoothie)
+
+CREATE (Oranges)-[:IN {quantity: "2"}]->(HealingCranberryCleanserGreenSmoothie)
+
+CREATE (Kale)-[:IN {quantity: "2cups"}]->(KiwiStrawberryTwistGreenSmoothie)
+
+CREATE (Kale)-[:IN {quantity: "2cups"}]->(HealingCranberryCleanserGreenSmoothie)
+
+CREATE (Kale)-[:IN {quantity: "2cups"}]->(PineappleKaleCoconutOilGreenSmoothie)
+
+CREATE (Kale)-[:IN {quantity: "2cups"}]->(CranberryKaleCoolerGreenSmoothie)
+
+CREATE (Kale)-[:IN {quantity: "2cups"}]->(Avo-BananaKaleGreenSmoothie)
+
+CREATE (Raspberries)-[:IN {quantity: "0.5cups"}]->(BerryCherryJubileeGreenSmoothie)
+
+CREATE (Grapes)-[:IN {quantity: "1cups"}]->(Cantaloupe-GrapeSweetnessGreenSmoothie)
+
+CREATE (Lemon)-[:IN {quantity: "1"}]->(MangoGingerImmuneSupportGreenSmoothie)
+
+CREATE (BokChoy)-[:IN {quantity: "2cups"}]->(StrawberryPeachRefresherGreenSmoothie)
+
+CREATE (Peache)-[:IN {quantity: "2"}]->(PeachCoconutDreamGreenSmoothie)
+
+CREATE (avocado)-[:IN {quantity: "0.25"}]->(Avo-BananaKaleGreenSmoothie)
+
+CREATE (Blueberry)-[:IN {quantity: "0.5cups"}]->(FreeRadicalFightingSuperGreenSmoothie)
+
+CREATE (Blueberry)-[:IN {quantity: "1.5cups"}]->(KiwiBerryPunchGreenSmoothie)
+
+CREATE (Blueberry)-[:IN {quantity: "0.5cups"}]->(BerryCherryJubileeGreenSmoothie)
+
+CREATE (Blueberry)-[:IN {quantity: "1cups"}]->(BerryProteinBashGreenSmoothie)
+
+CREATE (Blueberry)-[:IN {quantity: "1cups"}]->(StrawberryBananaBlueberryGreenSmoothie)
+
+CREATE (Cantaloupe)-[:IN {quantity: "2cups"}]->(FreeRadicalFightingSuperGreenSmoothie)
+
+CREATE (Cantaloupe)-[:IN {quantity: "0.5"}]->(Cantaloupe-GrapeSweetnessGreenSmoothie)
+
+CREATE (Peaches)-[:IN {quantity: "2cups"}]->(StrawberryPeachRefresherGreenSmoothie)
+
+CREATE (OrangeJuice)-[:IN {quantity: "2cups"}]->(KiwiStrawberryTwistGreenSmoothie)
+
+CREATE (OrangeJuice)-[:IN {quantity: "1cups"}]->(PomegranateCitrusPunchGreenSmoothie)
+
+CREATE (OrangeJuice)-[:IN {quantity: "0.75cups"}]->(StrawberryBananaBlueberryGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "0.75cups"}]->(StrawberryBananaBlueberryGreenSmoothie)
+
+CREATE (CoconutWater)-[:IN {quantity: "0.5cups"}]->(̱PinaColadaGreenSmoothie)
+
+CREATE (CoconutWater)-[:IN {quantity: "1cups"}]->(PeachCoconutDreamGreenSmoothie)
+
+CREATE (CoconutWater)-[:IN {quantity: "2cups"}]->(SPASkinCleanseGreenSmoothie)
+
+CREATE (CoconutFlakes)-[:IN {quantity: "0.125cups"}]->(̱PinaColadaGreenSmoothie)
+
+CREATE (LimeJuice)-[:IN {quantity: "0.5"}]->(FreeRadicalFightingSuperGreenSmoothie)
+
+CREATE (CacaoPowder)-[:IN {quantity: "0.1875cups"}]->(ChocolateCoveredCherryGreenSmoothie)
+
+CREATE (CoconutMilk)-[:IN {quantity: "0.25"}]->(StrawberryAndMintPopsicle)
+
+CREATE (GroundNutmeg)-[:IN {quantity: "0.208cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
+
+CREATE (Almond)-[:IN {quantity: "0.5cups"}]->(BerryProteinBashGreenSmoothie)
+
+CREATE (Avocado)-[:IN {quantity: "0.5"}]->(KiwiBerryPunchGreenSmoothie)
+
+CREATE (Avocado)-[:IN {quantity: "0.5"}]->(Cilantro-MangoDetoxGreenSmoothie)
+
+CREATE (Avocado)-[:IN {quantity: "1"}]->(SPASkinCleanseGreenSmoothie)
+
+CREATE (Strawberry)-[:IN {quantity: "2cups"}]->(KiwiStrawberryTwistGreenSmoothie)
+
+CREATE (Strawberry)-[:IN {quantity: "2cups"}]->(StrawberryAndMintPopsicle)
+
+CREATE (Strawberry)-[:IN {quantity: "1cups"}]->(BerryProteinBashGreenSmoothie)
+
+CREATE (Strawberry)-[:IN {quantity: "1cups"}]->(StrawberryPeachRefresherGreenSmoothie)
+
+CREATE (Strawberry)-[:IN {quantity: "1cups"}]->(StrawberryBananaBlueberryGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(Beginner'sLuckWithTopsGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "0.5cups"}]->(CranberryKaleCoolerGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "1cup"}]->(HealingCranberryCleanserGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "1cups"}]->(PomegranateCitrusPunchGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(PineappleKaleCoconutOilGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(BerryCherryJubileeGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "0.5cups"}]->(Cantaloupe-GrapeSweetnessGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "1cups"}]->(FreeRadicalFightingSuperGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(KiwiBerryPunchGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "0.25cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(CilantroLimeadeGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(Beginner'sLuck)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(Avo-BananaKaleGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(Cilantro-MangoDetoxGreenSmoothie)
+
+CREATE (Water)-[:IN {quantity: "2cups"}]->(MangoGingerImmuneSupportGreenSmoothie)
+
+CREATE (CoconutOil)-[:IN {quantity: "0.125cups"}]->(PineappleKaleCoconutOilGreenSmoothie)
+
+CREATE (CoconutOil)-[:IN {quantity: "0.125cups"}]->(Cantaloupe-GrapeSweetnessGreenSmoothie)
+
+CREATE (BloodOrange)-[:IN {quantity: "2"}]->(CranberryKaleCoolerGreenSmoothie)
+
+CREATE (Parsley)-[:IN {quantity: "1cups"}]->(MangoGingerImmuneSupportGreenSmoothie)
+
+CREATE (NavelOrangesJuice)-[:IN {quantity: "3"}]->(SunshineInAJarGreenSmoothie)
+
+CREATE (Pineapple)-[:IN {quantity: "3cups"}]->(̱PinaColadaGreenSmoothie)
+
+CREATE (Pineapple)-[:IN {quantity: "1cups"}]->(Beginner'sLuckWithTopsGreenSmoothie)
+
+CREATE (Pineapple)-[:IN {quantity: "3cups"}]->(SunshineInAJarGreenSmoothie)
+
+CREATE (Pineapple)-[:IN {quantity: "1cups"}]->(Beginner'sLuck)
+
+CREATE (Pineapple)-[:IN {quantity: "2cups"}]->(SPASkinCleanseGreenSmoothie)
+
+CREATE (Pineapple)-[:IN {quantity: "1cup"}]->(Cilantro-MangoDetoxGreenSmoothie)
+
+CREATE (LemonJuice)-[:IN {quantity: "1"}]->(KiwiStrawberryTwistGreenSmoothie)
+
+CREATE (Carrot)-[:IN {quantity: "2"}]->(Beginner'sLuckWithTopsGreenSmoothie)
+
+CREATE (Collards)-[:IN {quantity: "1cups"}]->(SunshineInAJarGreenSmoothie)
+
+CREATE (Mint)-[:IN {quantity: "1"}]->(FreeRadicalFightingSuperGreenSmoothie)
+
+CREATE (Mint)-[:IN {quantity: "0.5cups"}]->(StrawberryAndMintPopsicle)
+
+CREATE (PomegranateSeeds)-[:IN {quantity: "1cups"}]->(PomegranateCitrusPunchGreenSmoothie)
+
+CREATE (Ginger)-[:IN {quantity: "1inch"}]->(CilantroLimeadeGreenSmoothie)
+
+CREATE (Ginger)-[:IN {quantity: "1inch"}]->(MangoGingerImmuneSupportGreenSmoothie)
+
+CREATE (Celery)-[:IN {quantity: "1cups"}]->(MangoGingerImmuneSupportGreenSmoothie)
+
+CREATE (CranberryJuice)-[:IN {quantity: "1.5cups"}]->(CranberryKaleCoolerGreenSmoothie)
+
+CREATE (AlmondButter)-[:IN {quantity: "0.25cups"}]->(AlmondButterAndJellyGreenSmoothie)
+
+CREATE (Apple)-[:IN {quantity: "1"}]->(FreeRadicalFightingSuperGreenSmoothie)
+
+CREATE (Mango)-[:IN {quantity: "1cups"}]->(Beginner'sLuckWithTopsGreenSmoothie)
+
+CREATE (Mango)-[:IN {quantity: "2cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
+
+CREATE (Mango)-[:IN {quantity: "1.5cups"}]->(Cilantro-MangoDetoxGreenSmoothie)
+
+CREATE (Mango)-[:IN {quantity: "1cups"}]->(Beginner'sLuck)
+
+CREATE (Mango)-[:IN {quantity: "3cups"}]->(MangoGingerImmuneSupportGreenSmoothie)
+
+CREATE (Cherries)-[:IN {quantity: "2cups"}]->(ChocolateCoveredCherryGreenSmoothie)
+
+CREATE (Cherries)-[:IN {quantity: "1cup"}]->(BerryCherryJubileeGreenSmoothie)
+
+CREATE (GroundCinnamon)-[:IN {quantity: "0.0208cups"}]->(ASweetPearGreenSmoothie)
+
+CREATE (GroundCinnamon)-[:IN {quantity: "0.0208cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "2"}]->(CranberryKaleCoolerGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "2"}]->(HealingCranberryCleanserGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "2"}]->(AlmondButterAndJellyGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "2"}]->(ChocolateCoveredCherryGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(PineappleKaleCoconutOilGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(Beginner'sLuckWithTopsGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(KiwiStrawberryTwistGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(KiwiBerryPunchGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(BerryCherryJubileeGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "3"}]->(CilantroLimeadeGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "2"}]->(Beginner'sLuck)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(PomegranateCitrusPunchGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "3"}]->(Avo-BananaKaleGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(BerryProteinBashGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "1"}]->(ASweetPearGreenSmoothie)
+
+CREATE (Banana)-[:IN {quantity: "2"}]->(StrawberryBananaBlueberryGreenSmoothie)
+
+CREATE (Grape)-[:IN {quantity: "2cups"}]->(AlmondButterAndJellyGreenSmoothie)
+
+CREATE (Grape)-[:IN {quantity: "2cups"}]->(PeachCoconutDreamGreenSmoothie)
+
+CREATE (Kiwi)-[:IN {quantity: "2"}]->(KiwiStrawberryTwistGreenSmoothie)
+
+CREATE (Kiwi)-[:IN {quantity: "1"}]->(KiwiBerryPunchGreenSmoothie)
+
+CREATE (Cinnamon)-[:IN {quantity: "0.208cups"}]->(ChocolateCoveredCherryGreenSmoothie)

@@ -1,131 +1,104 @@
-# -*- coding: utf-8 -*-
 import csv
 import re
 import networkx as nx
 
 
-def real_parse_smoothie_file(csvfile):
+def parse_smoothie_file(csvfile):
+    """Parse unruly smoothie data file from mygreensmoothie.com
+       scraped with import.io (We bought the PDF too for $7)"""
     recipe_list = []
-    ingr_list = []
-    with open(csvfile, 'rb') as f:
+    ingr_dict = {}
+    with open(csvfile, 'r') as f:
         reader = csv.reader(f)
-        reader.next()
+        next(reader)
         for row in reader:
             ingrs_row = row[9]
-            ingrs = []
+            ingrs = [] 
             for ingr in ingrs_row.split('; '):
-                ingr = filter(bool, re.split('qnt:|ingr:|type:', ingr))
-                ingrs.append(ingr)
+                ingr = list(filter(bool, re.split('qnt:|ingr:|type:', ingr)))
+                strp_qnt = ingr[0].strip()
+                strp_ingr = ingr[1].strip()
+                strp_type = ingr[2].strip()
+                ingr_dict.setdefault(strp_ingr, (strp_qnt, strp_ingr, strp_type))
+                ingrs.append((strp_qnt, strp_ingr, strp_type))
             recipe = {
                 'page_url': row[5],
-                'name': _to_camelcase([row[6]])[0],
+                'name': _to_camelcase(row[6]),
                 'description': row[7],
                 'num_served': row[8].split(' ')[1],
                 'ingredients': ingrs
             }
             recipe_list.append(recipe)
-            ingr_list += ingrs
-    return recipe_list, set(ingr_list)
-
-
-def real_build_graph(recipes, ingredients):
-    g = nx.DiGraph()
-    for qnt, ingr, label in ingredients:
-        g.add_node(ingr, {'UniqueId': ingr, 'Label': label, 'Catagory': ''})
-    for recipe in recipes:
-        g.add_node(recipe['name'], {
-            'UniqueId': recipe['name'], 'Label': 'Recipe', 
-            'Description': recipe['description'], 'SourceUrl': recipe['page_url'], 
-            'Servings': recipe['num_served'],
-        })
-        ingrs = recipe['ingredients']
-        for qnt, ingr, label in ingrs.iteritems():
-            g.add_edge(ingr, recipe['name'], {'quantity': qnt})
-    return g
-
-def parse_smoothie_file(csvfile):
-    recipe_list = []
-    ingr_list = []
-    with open(csvfile, 'rb') as f:
-        reader = csv.reader(f)
-        reader.next()
-        for row in reader:
-            ingrs_content = row[9]
-            qnts = re.findall('(\d*\.\d+|\d+)\s(cups?|inch)?', ingrs_content)
-            new_qnts = []
-            for qnt in qnts:
-                if qnt[1]:
-                    new_qnts.append(qnt[0] + ' ' + qnt[1])
-                else:
-                    new_qnts.append(qnt[0])
-            ### THIS IS EMBARRASING BUT I HAVE NO TIME
-            ingrs = re.split(
-                '\d+\.?\d*\sc?u?p?s?i?n?c?h?t?s?p?t?b?s?o?z?', ingrs_content
-            )
-            ingrs = _to_camelcase(ingrs)
-            ingr_list += ingrs
-            ingr_tuples = dict(zip(ingrs, new_qnts))
-            recipe = {
-                'page_url': row[5],
-                'name': _to_camelcase([row[6]])[0],
-                'description': row[7],
-                'num_served': row[8].split(' ')[1],
-                'ingredients': ingr_tuples
-            }
-            recipe_list.append(recipe)
-    return recipe_list, set(ingr_list)
+    return recipe_list, ingr_dict.values()
 
 
 def build_graph(recipes, ingredients):
+    """Build a NetworkX graph with smoothie data
+       using Cypher style node formatting"""
     g = nx.DiGraph()
-    for ingr in ingredients:
-        g.add_node(ingr, {'UniqueId': ingr, 'Label': '', 'Catagory': ''})
+    for qnt, ingr, label in ingredients:
+        cypher_node = '{0}:{1}'.format(ingr, label)
+        g.add_node(cypher_node, {'UniqueId': ingr})
     for recipe in recipes:
-        g.add_node(recipe['name'], {
-            'UniqueId': recipe['name'], 'Label': 'Recipe', 
-            'Description': recipe['description'], 'SourceUrl': recipe['page_url'], 
+        cypher_node = '{0}:{1}'.format(recipe['name'], 'Recipe')
+        g.add_node(cypher_node, {
+            'UniqueId': recipe['name'], 
+            'Description': recipe['description'], 
+            'SourceUrl': recipe['page_url'],
             'Servings': recipe['num_served'],
         })
         ingrs = recipe['ingredients']
-        for ingr, qnt in ingrs.iteritems():
-            g.add_edge(ingr, recipe['name'], {'quantity': qnt})
+        for qnt, ingr, label in ingrs:
+            cypher_ingr = '{0}:{1}'.format(ingr, label)
+            cypher_rcp = '{0}:{1}'.format(recipe['name'], 'Recipe')
+            g.add_edge(cypher_ingr, cypher_rcp, {'quantity': qnt})
     return g
 
-def graph_to_cypher(g, filename):
+
+def graph_to_csv(g, ingrfile, rcpfile, edgefile):
+    """TODO: Write to csv for storage of base/training data"""
+    recipes = []
+    for node, attrs in g.nodes(data=True):
+        row = OrderedDict(attrs)
+    pass
+
+
+def graph_to_cypher(g, filename, merge=False):
+    """Write NetworkX graph to properly formatted output.
+       Nodes should have Cypher style format i.e. UniqueName:Label"""
     queries = ['//Graph written from NetworkX']
     for node, attrs in g.nodes(data=True):
-        label = attrs['Label']
-        q = "CREATE (%s:%s {\n" % (node, label)
+        query = "CREATE (%s {\n" % (node)
         counter = 0
-        for attr, val in attrs.iteritems():
-            if attr != 'Label':
-                q += '\t{0}: "{1}"'.format(attr, val)
-            if counter < len(attrs) - 2:
-                q += ',\n'
+        for attr, val in attrs.items():
+            query += '\t{0}: "{1}"'.format(attr, val)
+            if counter < len(attrs) - 1:
+                query += ',\n'
             counter += 1
-        q += '})' 
-        queries.append(q)
+        query += '})' 
+        queries.append(query)
     for source, target, attrs in g.edges(data=True):
-        q = 'CREATE (%s)-[:IN {' % (source)
-        for attr, value in attrs.iteritems():   
-            q += '{0}: "{1}"'.format(attr, value)
-        q += '}]->(%s)' % (target)
-        queries.append(q)
-    with open(filename, 'wb') as f:
+        source = source.split(':')[0]
+        target = target.split(':')[0]
+        if merge:
+            query = 'MERGE (%s)-[:IN {' % (source)
+        else:
+            query = 'CREATE (%s)-[:IN {' % (source)
+        for attr, value in attrs.items():   
+            query += '{0}: "{1}"'.format(attr, value)
+        query += '}]->(%s)' % (target)
+        queries.append(query)
+    with open(filename, 'w') as f:
         f.write('\n\n'.join(queries))
 
-    return queries
 
-def _to_camelcase(ingrs):
-    processed = []
-    ingrs = filter(bool, ingrs)
-    for ingr in ingrs:
-        ingr = ingr.strip(' ')
-        ingr_list = filter(bool, ingr.split(' '))
-        new_ingr = ''
-        for word in ingr_list:
-            letter_list = list(word)
-            letter_list[0] = letter_list[0].upper()
-            new_ingr += ''.join(letter_list)
-        processed.append(new_ingr)
-    return processed
+def _to_camelcase(name):
+    """Helper function that formats multi-word strings
+       as CamelCase """
+    tokens = filter(bool, name.strip().split(' '))
+    camel_name = ''
+    for token in tokens:
+        letters = list(token)
+        letters[0] = letters[0].upper()
+        camel_name += ''.join(letters)
+    return camel_name
