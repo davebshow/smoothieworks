@@ -34,7 +34,7 @@ def parse_smoothie_file(csvfile):
 
 def build_graph(recipes, ingredients):
     """Build a NetworkX graph with smoothie data
-       using Cypher style node formatting"""
+       using Cypher style node formatting: UniqueName:Label"""
     g = nx.DiGraph()
     for qnt, ingr, label in ingredients:
         cypher_node = '{0}:{1}'.format(ingr, label)
@@ -50,8 +50,7 @@ def build_graph(recipes, ingredients):
         ingrs = recipe['ingredients']
         for qnt, ingr, label in ingrs:
             cypher_ingr = '{0}:{1}'.format(ingr, label)
-            cypher_rcp = '{0}:{1}'.format(recipe['name'], 'Recipe')
-            g.add_edge(cypher_ingr, cypher_rcp, {'quantity': qnt})
+            g.add_edge(cypher_ingr, cypher_node, {'quantity': qnt})
     return g
 
 
@@ -64,8 +63,8 @@ def graph_to_csv(g, ingrfile, rcpfile, edgefile):
 
 
 def graph_to_cypher(g, filename, merge=False):
-    """Write NetworkX graph to properly formatted output.
-       Nodes should have Cypher style format i.e. UniqueName:Label"""
+    """Write NetworkX graph to properly formatted Cypher.
+       Nodes should have Cypher style format: UniqueName:Label"""
     queries = ['//Graph written from NetworkX']
     for node, attrs in g.nodes(data=True):
         query = "CREATE (%s {\n" % (node)
@@ -96,8 +95,9 @@ def _to_camelcase(name):
     """Helper function that formats multi-word strings
        as CamelCase """
     tokens = filter(bool, name.strip().split(' '))
-    camel_name = ''
+    camel_name = '' 
     for token in tokens:
+        token = re.sub('-', '', token)
         letters = list(token)
         letters[0] = letters[0].upper()
         camel_name += ''.join(letters)
