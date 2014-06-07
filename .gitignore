@@ -1,13 +1,10 @@
-# Byte-compiled / optimized / DLL files
+# Git
+.gitignore
+.*
+*.*~
+*.orig
+# Python and packages
 __pycache__/
-*.py[cod]
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-env/
 bin/
 build/
 develop-eggs/
@@ -19,36 +16,30 @@ parts/
 sdist/
 var/
 *.egg-info/
+*.py[codt]
 .installed.cfg
 *.egg
+*.so
+local_settings.py
 
-# Installer logs
+# Logs
+*.log
 pip-log.txt
 pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
 .tox/
 .coverage
-.cache
 nosetests.xml
 coverage.xml
 
-# Translations
-*.mo
+# Downloads and extras
+*.tar.gz
+neo4*/
+sylva/media/
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+# Databases
+*.sqlite
 
-# Rope
-.ropeproject
-
-# Django stuff:
-*.log
-*.pot
-
-# Sphinx documentation
-docs/_build/
-
+# Sublime Text
+.codeintel/
+*.sublime-project
+*.sublime-workspace
