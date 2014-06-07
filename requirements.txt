@@ -1,0 +1,5 @@
+decorator==3.4.0
+distribute==0.6.34
+ipdb==0.8
+ipython==2.1.0
+networkx==1.9rc1
