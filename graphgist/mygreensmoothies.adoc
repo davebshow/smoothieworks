@@ -12,247 +12,247 @@
 //Graph written from NetworkX
 
 CREATE (GroundCinnamon:Booster {
-	UniqueId: "GroundCinnamon"})
+    UniqueId: "GroundCinnamon"})
 
 CREATE (Carrot:Root {
-	UniqueId: "Carrot"})
+    UniqueId: "Carrot"})
 
 CREATE (Cantaloupe:Fruit {
-	UniqueId: "Cantaloupe"})
+    UniqueId: "Cantaloupe"})
 
 CREATE (Banana:Fruit {
-	UniqueId: "Banana"})
+    UniqueId: "Banana"})
 
 CREATE (AlmondButter:Booster {
-	UniqueId: "AlmondButter"})
+    UniqueId: "AlmondButter"})
 
 CREATE (CantaloupeGrapeSweetnessGreenSmoothie:Recipe {
-	UniqueId: "CantaloupeGrapeSweetnessGreenSmoothie"})
+    UniqueId: "CantaloupeGrapeSweetnessGreenSmoothie"})
 
 CREATE (ChocolateCoveredCherryGreenSmoothie:Recipe {
-	UniqueId: "ChocolateCoveredCherryGreenSmoothie"})
+    UniqueId: "ChocolateCoveredCherryGreenSmoothie"})
 
 CREATE (Rasberry:Fruit {
-	UniqueId: "Rasberry"})
+    UniqueId: "Rasberry"})
 
 CREATE (StrawberryPeachRefresherGreenSmoothie:Recipe {
-	UniqueId: "StrawberryPeachRefresherGreenSmoothie"})
+    UniqueId: "StrawberryPeachRefresherGreenSmoothie"})
 
 CREATE (OrangeJuice:Base {
-	UniqueId: "OrangeJuice"})
+    UniqueId: "OrangeJuice"})
 
 CREATE (Celery:Green {
-	UniqueId: "Celery"})
+    UniqueId: "Celery"})
 
 CREATE (Lemon:Fruit {
-	UniqueId: "Lemon"})
+    UniqueId: "Lemon"})
 
 CREATE (Cilantro:Herb {
-	UniqueId: "Cilantro"})
+    UniqueId: "Cilantro"})
 
 CREATE (Parsley:Herb {
-	UniqueId: "Parsley"})
+    UniqueId: "Parsley"})
 
 CREATE (Spinach:Green {
-	UniqueId: "Spinach"})
+    UniqueId: "Spinach"})
 
 CREATE (ThanksgivingInYourMouthGreenSmoothie:Recipe {
-	UniqueId: "ThanksgivingInYourMouthGreenSmoothie"})
+    UniqueId: "ThanksgivingInYourMouthGreenSmoothie"})
 
 CREATE (Ginger:Booster {
-	UniqueId: "Ginger"})
+    UniqueId: "Ginger"})
 
 CREATE (KiwiStrawberryTwistGreenSmoothie:Recipe {
-	UniqueId: "KiwiStrawberryTwistGreenSmoothie"})
+    UniqueId: "KiwiStrawberryTwistGreenSmoothie"})
 
 CREATE (honey:Sweetener {
-	UniqueId: "honey"})
+    UniqueId: "honey"})
 
 CREATE (Mint:Herb {
-	UniqueId: "Mint"})
+    UniqueId: "Mint"})
 
 CREATE (SPASkinCleanseGreenSmoothie:Recipe {
-	UniqueId: "SPASkinCleanseGreenSmoothie"})
+    UniqueId: "SPASkinCleanseGreenSmoothie"})
 
 CREATE (PinaColadaGreenSmoothie:Recipe {
-	UniqueId: "PinaColadaGreenSmoothie"})
+    UniqueId: "PinaColadaGreenSmoothie"})
 
 CREATE (CoconutWater:Base {
-	UniqueId: "CoconutWater"})
+    UniqueId: "CoconutWater"})
 
 CREATE (CranberryKaleCoolerGreenSmoothie:Recipe {
-	UniqueId: "CranberryKaleCoolerGreenSmoothie"})
+    UniqueId: "CranberryKaleCoolerGreenSmoothie"})
 
 CREATE (Grapes:Fruit {
-	UniqueId: "Grapes"})
+    UniqueId: "Grapes"})
 
 CREATE (Water:Base {
-	UniqueId: "Water"})
+    UniqueId: "Water"})
 
 CREATE (Kiwi:Fruit {
-	UniqueId: "Kiwi"})
+    UniqueId: "Kiwi"})
 
 CREATE (Peaches:Fruit {
-	UniqueId: "Peaches"})
+    UniqueId: "Peaches"})
 
 CREATE (BerryCherryJubileeGreenSmoothie:Recipe {
-	UniqueId: "BerryCherryJubileeGreenSmoothie"})
+    UniqueId: "BerryCherryJubileeGreenSmoothie"})
 
 CREATE (CoconutMilk:Base {
-	UniqueId: "CoconutMilk"})
+    UniqueId: "CoconutMilk"})
 
 CREATE (LemonJuice:Fruit {
-	UniqueId: "LemonJuice"})
+    UniqueId: "LemonJuice"})
 
 CREATE (Pear:Fruit {
-	UniqueId: "Pear"})
+    UniqueId: "Pear"})
 
 CREATE (StrawberryAndMintPopsicle:Recipe {
-	UniqueId: "StrawberryAndMintPopsicle"})
+    UniqueId: "StrawberryAndMintPopsicle"})
 
 CREATE (HealingCranberryCleanserGreenSmoothie:Recipe {
-	UniqueId: "HealingCranberryCleanserGreenSmoothie"})
+    UniqueId: "HealingCranberryCleanserGreenSmoothie"})
 
 CREATE (BerryProteinBashGreenSmoothie:Recipe {
-	UniqueId: "BerryProteinBashGreenSmoothie"})
+    UniqueId: "BerryProteinBashGreenSmoothie"})
 
 CREATE (Apple:Fruit {
-	UniqueId: "Apple"})
+    UniqueId: "Apple"})
 
 CREATE (KiwiBerryPunchGreenSmoothie:Recipe {
-	UniqueId: "KiwiBerryPunchGreenSmoothie"})
+    UniqueId: "KiwiBerryPunchGreenSmoothie"})
 
 CREATE (BloodOrange:Fruit {
-	UniqueId: "BloodOrange"})
+    UniqueId: "BloodOrange"})
 
 CREATE (NavelOrangeJuice:Fruit {
-	UniqueId: "NavelOrangeJuice"})
+    UniqueId: "NavelOrangeJuice"})
 
 CREATE (BeginnersLuckWithTopsGreenSmoothie:Recipe {
-	UniqueId: "BeginnersLuckWithTopsGreenSmoothie"})
+    UniqueId: "BeginnersLuckWithTopsGreenSmoothie"})
 
 CREATE (Strawberry:Fruit {
-	UniqueId: "Strawberry"})
+    UniqueId: "Strawberry"})
 
 CREATE (ASweetPearGreenSmoothie:Recipe {
-	UniqueId: "ASweetPearGreenSmoothie"})
+    UniqueId: "ASweetPearGreenSmoothie"})
 
 CREATE (Kale:Green {
-	UniqueId: "Kale"})
+    UniqueId: "Kale"})
 
 CREATE (CacaoPowder:Booster {
-	UniqueId: "CacaoPowder"})
+    UniqueId: "CacaoPowder"})
 
 CREATE (StrawberryBananaBlueberryGreenSmoothie:Recipe {
-	UniqueId: "StrawberryBananaBlueberryGreenSmoothie"})
+    UniqueId: "StrawberryBananaBlueberryGreenSmoothie"})
 
 CREATE (GroundNutmeg:Booster {
-	UniqueId: "GroundNutmeg"})
+    UniqueId: "GroundNutmeg"})
 
 CREATE (CucumberPeeled:Fruit {
-	UniqueId: "CucumberPeeled"})
+    UniqueId: "CucumberPeeled"})
 
 CREATE (SunshineInAJarGreenSmoothie:Recipe {
-	UniqueId: "SunshineInAJarGreenSmoothie"})
+    UniqueId: "SunshineInAJarGreenSmoothie"})
 
 CREATE (Raspberries:Fruit {
-	UniqueId: "Raspberries"})
+    UniqueId: "Raspberries"})
 
 CREATE (Almond:Booster {
-	UniqueId: "Almond"})
+    UniqueId: "Almond"})
 
 CREATE (Cinnamon:Booster {
-	UniqueId: "Cinnamon"})
+    UniqueId: "Cinnamon"})
 
 CREATE (Pineapple:Fruit {
-	UniqueId: "Pineapple"})
+    UniqueId: "Pineapple"})
 
 CREATE (Collards:Green {
-	UniqueId: "Collards"})
+    UniqueId: "Collards"})
 
 CREATE (SweetPotato:Root {
-	UniqueId: "SweetPotato"})
+    UniqueId: "SweetPotato"})
 
 CREATE (Grape:Fruit {
-	UniqueId: "Grape"})
+    UniqueId: "Grape"})
 
 CREATE (AvoBananaKaleGreenSmoothie:Recipe {
-	UniqueId: "AvoBananaKaleGreenSmoothie"})
+    UniqueId: "AvoBananaKaleGreenSmoothie"})
 
 CREATE (PeachCoconutDreamGreenSmoothie:Recipe {
-	UniqueId: "PeachCoconutDreamGreenSmoothie"})
+    UniqueId: "PeachCoconutDreamGreenSmoothie"})
 
 CREATE (Avocado:Fruit {
-	UniqueId: "Avocado"})
+    UniqueId: "Avocado"})
 
 CREATE (Peache:Fruit {
-	UniqueId: "Peache"})
+    UniqueId: "Peache"})
 
 CREATE (CranberryJuice:Base {
-	UniqueId: "CranberryJuice"})
+    UniqueId: "CranberryJuice"})
 
 CREATE (Cherries:Fruit {
-	UniqueId: "Cherries"})
+    UniqueId: "Cherries"})
 
 CREATE (LimeJuice:Fruit {
-	UniqueId: "LimeJuice"})
+    UniqueId: "LimeJuice"})
 
 CREATE (Mango:Fruit {
-	UniqueId: "Mango"})
+    UniqueId: "Mango"})
 
 CREATE (CoconutFlakes:Booster {
-	UniqueId: "CoconutFlakes"})
+    UniqueId: "CoconutFlakes"})
 
 CREATE (AlmondButterAndJellyGreenSmoothie:Recipe {
-	UniqueId: "AlmondButterAndJellyGreenSmoothie"})
+    UniqueId: "AlmondButterAndJellyGreenSmoothie"})
 
 CREATE (AlmondMilk:Base {
-	UniqueId: "AlmondMilk"})
+    UniqueId: "AlmondMilk"})
 
 CREATE (Orange:Fruit {
-	UniqueId: "Orange"})
+    UniqueId: "Orange"})
 
 CREATE (Blueberry:Fruit {
-	UniqueId: "Blueberry"})
+    UniqueId: "Blueberry"})
 
 CREATE (PomegranateCitrusPunchGreenSmoothie:Recipe {
-	UniqueId: "PomegranateCitrusPunchGreenSmoothie"})
+    UniqueId: "PomegranateCitrusPunchGreenSmoothie"})
 
 CREATE (CoconutOil:Booster {
-	UniqueId: "CoconutOil"})
+    UniqueId: "CoconutOil"})
 
 CREATE (avocado:Fruit {
-	UniqueId: "avocado"})
+    UniqueId: "avocado"})
 
 CREATE (MangoGingerImmuneSupportGreenSmoothie:Recipe {
-	UniqueId: "MangoGingerImmuneSupportGreenSmoothie"})
+    UniqueId: "MangoGingerImmuneSupportGreenSmoothie"})
 
 CREATE (Lime:Fruit {
-	UniqueId: "Lime"})
+    UniqueId: "Lime"})
 
 CREATE (BokChoy:Green {
-	UniqueId: "BokChoy"})
+    UniqueId: "BokChoy"})
 
 CREATE (CilantroMangoDetoxGreenSmoothie:Recipe {
-	UniqueId: "CilantroMangoDetoxGreenSmoothie"})
+    UniqueId: "CilantroMangoDetoxGreenSmoothie"})
 
 CREATE (FreeRadicalFightingSuperGreenSmoothie:Recipe {
-	UniqueId: "FreeRadicalFightingSuperGreenSmoothie"})
+    UniqueId: "FreeRadicalFightingSuperGreenSmoothie"})
 
 CREATE (Cranberries:Fruit {
-	UniqueId: "Cranberries"})
+    UniqueId: "Cranberries"})
 
 CREATE (PineappleKaleCoconutOilGreenSmoothie:Recipe {
-	UniqueId: "PineappleKaleCoconutOilGreenSmoothie"})
+    UniqueId: "PineappleKaleCoconutOilGreenSmoothie"})
 
 CREATE (BeginnersLuck:Recipe {
-	UniqueId: "BeginnersLuck"})
+    UniqueId: "BeginnersLuck"})
 
 CREATE (CilantroLimeadeGreenSmoothie:Recipe {
-	UniqueId: "CilantroLimeadeGreenSmoothie"})
+    UniqueId: "CilantroLimeadeGreenSmoothie"})
 
 CREATE (PomegranateSeeds:Fruit {
-	UniqueId: "PomegranateSeeds"})
+    UniqueId: "PomegranateSeeds"})
 
 CREATE (GroundCinnamon)-[:IN {quantity: "0.0208cups"}]->(ThanksgivingInYourMouthGreenSmoothie)
 
@@ -564,14 +564,14 @@ RETURN *
 [source,cypher]
 ----
 MATCH    (strawberry {UniqueId: "Strawberry"})-->(recipe)
-WITH     collect(distinct recipe) AS recipes
+WITH     collect(DISTINCT recipe) AS recipes
 MATCH    (ingredient)-->(recipe) 
 WHERE    recipe IN recipes AND NOT 
          ingredient.UniqueId IN ["Strawberry"]
-RETURN   ingredient.UniqueId as Ingredient,
-		 labels(ingredient)[0] as Type,
-         count(*) as NumOccurances 
-ORDER BY count(*) desc
+RETURN   ingredient.UniqueId AS Ingredient,
+         labels(ingredient)[0] AS Type,
+         count(*) AS NumOccurances 
+ORDER BY count(*) DESC
 ----
 //output
 //table
@@ -585,15 +585,15 @@ ORDER BY count(*) desc
 [source,cypher]
 ----
 MATCH    (blueberry {UniqueId: "Blueberry"})-->(recipe),
-		 (water {UniqueId: "Water"})-->(recipe)
-WITH     collect(distinct recipe) AS recipes
+         (water {UniqueId: "Water"})-->(recipe)
+WITH     collect(DISTINCT recipe) AS recipes
 MATCH    (ingredient)-->(recipe) 
 WHERE    recipe IN recipes AND NOT 
          ingredient.UniqueId IN ["Blueberry", "Water"]
-RETURN   ingredient.UniqueId as Ingredient, 
-		 labels(ingredient)[0] as Type,
-         count(*) as NumOccurances 
-ORDER BY count(*) desc
+RETURN   ingredient.UniqueId AS Ingredient, 
+         labels(ingredient)[0] AS Type,
+         count(*) AS NumOccurances 
+ORDER BY count(*) DESC
 ----
 //output
 //table
@@ -612,20 +612,49 @@ ORDER BY count(*) desc
 ----
 MATCH     (sourceIngredients)-->(sourceRecipe {UniqueId: "PineappleKaleCoconutOilGreenSmoothie"})
 WITH      sourceRecipe, 
-          collect(distinct sourceIngredients) AS sourceIngr
+          collect(DISTINCT sourceIngredients) AS sourceIngr
 MATCH     (targetIngr)-->(targetRecipes)
 WHERE NOT targetRecipes = sourceRecipe
 WITH      targetRecipes, 
-          collect(distinct targetIngr) AS targets,
+          collect(DISTINCT targetIngr) AS targets,
           sourceIngr AS sources 
 WITH      targetRecipes,
           filter(x in targets WHERE x in sources) AS intersect, 
           filter(x in targets WHERE not x in sources) + sources AS union
-RETURN    targetRecipes.UniqueId as Recipe, 
+RETURN    targetRecipes.UniqueId AS Recipe, 
           extract(ingr in intersect | ingr.UniqueId) AS Intersect, 
           extract(ingr in union | ingr.UniqueId)  AS Union,
-          length(intersect) * 1.0 / length(union) as SimilarityCOF
-ORDER BY  SimilarityCOF desc
+          length(intersect) * 1.0 / length(union) AS SimilarityCOF
+ORDER BY  SimilarityCOF DESC
+
+----
+//output
+//table
+'''
+
+== Recommendation- a simple example:
+
+'''
+== Recommend some combinations based on user input: Pineapple and Spinach. This sort of filtering would be done in the client, but to give an idea, we'll do something here where we only recommend on base, booster, and green.
+
+[source, cypher]
+----
+MATCH    (blueberry {UniqueId: "Blueberry"})-->(recipe),
+         (water {UniqueId: "Water"})-->(recipe)
+WITH     blueberry,
+         water,
+         [labels(blueberry)[0], labels(water)[0]] AS baseTypes,
+         collect(DISTINCT recipe) AS recipes
+WITH     recipes,
+         filter(type in baseTypes WHERE NOT type in ["Fruit", "Herb", "Root"]) AS filter
+MATCH    (ingredient)-->(recipe) 
+WHERE    recipe IN recipes 
+AND NOT  ingredient.UniqueId IN ["Blueberry", "Water"]
+AND NOT  labels(ingredient)[0] IN filter 
+RETURN   ingredient.UniqueId AS Ingredient, 
+         labels(ingredient)[0] AS Type,
+         count(*) AS NumOccurances 
+ORDER BY Type, count(*) DESC
 
 ----
 //output
