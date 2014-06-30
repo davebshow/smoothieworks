@@ -1,8 +1,7 @@
 # Git
 .gitignore
-.*
-*.*~
 *.orig
+static/
 # Python and packages
 __pycache__/
 bin/
@@ -34,7 +33,6 @@ coverage.xml
 # Downloads and extras
 *.tar.gz
 neo4*/
-sylva/media/
 
 # Databases
 *.sqlite
