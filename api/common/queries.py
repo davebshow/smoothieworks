@@ -9,9 +9,8 @@ class IngredientRecommender(object):
 
     INGR_MATCH = 'MATCH ({0} {{UniqueId: "{0}"}})-->(recipe)'
     MATCH_PTRN = ', ({0} {{UniqueId: "{0}"}})-->(recipe)'
-    WITH = 'WITH collect(DISTINCT recipe) AS recipes'
     RCP_MATCH = 'MATCH (ingredient)-->(recipe)'
-    WHERE = 'WHERE recipe IN recipes AND NOT ingredient.UniqueId IN {0}'
+    WHERE = 'WHERE NOT ingredient.UniqueId IN {0}'
     RETURN = ('RETURN ingredient.UniqueId AS Ingredient, '
               'labels(ingredient)[0] AS Type, '
               'count(*) AS NumOccurances ')
@@ -28,9 +27,8 @@ class IngredientRecommender(object):
         if len(self.ingrs) > 1:
             for ingr in self.ingrs[1:]:
                 match += self.MATCH_PTRN.format(ingr)
-        self.query = '{0} {1} {2} {3} {4} {5}'.format(
+        self.query = '{0} {1} {2} {3} {4}'.format(
             match,
-            self.WITH,
             self.RCP_MATCH,
             self.WHERE.format(json.dumps(self.ingrs)),
             self.RETURN,

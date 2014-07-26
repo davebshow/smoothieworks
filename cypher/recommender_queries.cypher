@@ -1,10 +1,8 @@
 // Find ingredients that are most frequently combined with strawberry. 
 
 MATCH    (strawberry {UniqueId: "Strawberry"})-->(recipe)
-WITH     collect(DISTINCT recipe) AS recipes
 MATCH    (ingredient)-->(recipe) 
-WHERE    recipe IN recipes AND NOT 
-         ingredient.UniqueId IN ["Strawberry"]
+WHERE    NOT ingredient.UniqueId IN ["Strawberry"]
 RETURN   ingredient.UniqueId AS Ingredient,
          labels(ingredient)[0] AS Type,
          count(*) AS NumOccurances 
@@ -13,16 +11,14 @@ ORDER BY count(*) DESC
 
 // Or with blueberry and water.
 
-MATCH    (blueberry {UniqueId: "Blueberry"})-->(recipe),
-         (water {UniqueId: "Water"})-->(recipe)
-WITH     collect(DISTINCT recipe) AS recipes
-MATCH    (ingredient)-->(recipe) 
-WHERE    recipe IN recipes AND NOT 
-         ingredient.UniqueId IN ["Blueberry", "Water"]
-RETURN   ingredient.UniqueId AS Ingredient, 
-         labels(ingredient)[0] AS Type,
-         count(*) AS NumOccurances 
-ORDER BY count(*) DESC
+MATCH     (blueberry {UniqueId: "Blueberry"})-->(recipe),
+          (water {UniqueId: "Water"})-->(recipe)
+MATCH     (ingredient)-->(recipe) 
+WHERE NOT ingredient.UniqueId IN ["Blueberry", "Water"]
+RETURN    ingredient.UniqueId AS Ingredient, 
+          labels(ingredient)[0] AS Type,
+          count(*) AS NumOccurances 
+ORDER BY  count(*) DESC
 
 
 // Jaccard similarity coefficient query
