@@ -1,4 +1,6 @@
 // Find ingredients that are most frequently combined with strawberry. 
+// With these queires I should return the recipeId as well to link in the client so 
+// users can easily find the source.
 
 MATCH     (strawberry {UniqueId: "Strawberry"})-->(recipe)
 MATCH     (ingredient)-->(recipe) 
@@ -79,3 +81,6 @@ RETURN   ingredient.UniqueId AS Ingredient,
          labels(ingredient)[0] AS Type,
          count(*) AS NumOccurances 
 ORDER BY Type, count(*) DESC
+
+
+// TODO. Maybe we should recommend # of fruits, bases, etc. based on the similar recipes. Maybe. 
