@@ -26,6 +26,7 @@ ORDER BY  count(*) DESC
 // Jaccard similarity coefficient queries
 // I wrote the first query while learning cypher. In a db where all recipes share at least one
 // ingredient I think the first one will be faster.
+// Maybe somehow blend these two queries. Need bigger data set first.
 
 MATCH     (sourceIngredients)-->(sourceRecipe {UniqueId: "PineappleKaleCoconutOilGreenSmoothie"})
 WITH      sourceRecipe, 
