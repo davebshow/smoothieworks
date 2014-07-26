@@ -563,12 +563,12 @@ RETURN *
 === Ingredient combination query
 [source,cypher]
 ----
-MATCH    (strawberry {UniqueId: "Strawberry"})-->(recipe)
-MATCH    (ingredient)-->(recipe) 
-WHERE    NOT ingredient.UniqueId IN ["Strawberry"]
-RETURN   ingredient.UniqueId AS Ingredient,
-         labels(ingredient)[0] AS Type,
-         count(*) AS NumOccurances 
+MATCH     (strawberry {UniqueId: "Strawberry"})-->(recipe)
+MATCH     (ingredient)-->(recipe) 
+WHERE NOT ingredient.UniqueId IN ["Strawberry"]
+RETURN    ingredient.UniqueId AS Ingredient,
+          labels(ingredient)[0] AS Type,
+          count(*) AS NumOccurances 
 ORDER BY count(*) DESC
 ----
 //output

@@ -1,12 +1,12 @@
 // Find ingredients that are most frequently combined with strawberry. 
 
-MATCH    (strawberry {UniqueId: "Strawberry"})-->(recipe)
-MATCH    (ingredient)-->(recipe) 
-WHERE    NOT ingredient.UniqueId IN ["Strawberry"]
-RETURN   ingredient.UniqueId AS Ingredient,
-         labels(ingredient)[0] AS Type,
-         count(*) AS NumOccurances 
-ORDER BY count(*) DESC
+MATCH     (strawberry {UniqueId: "Strawberry"})-->(recipe)
+MATCH     (ingredient)-->(recipe) 
+WHERE NOT ingredient.UniqueId IN ["Strawberry"]
+RETURN    ingredient.UniqueId AS Ingredient,
+          labels(ingredient)[0] AS Type,
+          count(*) AS NumOccurances 
+ORDER BY  count(*) DESC
 
 
 // Or with blueberry and water.
