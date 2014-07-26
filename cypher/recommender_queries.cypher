@@ -21,7 +21,9 @@ RETURN    ingredient.UniqueId AS Ingredient,
 ORDER BY  count(*) DESC
 
 
-// Jaccard similarity coefficient query
+// Jaccard similarity coefficient queries
+// I wrote the first query while learning cypher. In a db where all recipes share at least one
+// ingredient I think the first one will be faster.
 
 MATCH     (sourceIngredients)-->(sourceRecipe {UniqueId: "PineappleKaleCoconutOilGreenSmoothie"})
 WITH      sourceRecipe, 
@@ -38,6 +40,23 @@ RETURN    targetRecipes.UniqueId AS Recipe,
           extract(ingr in intersect | ingr.UniqueId) AS Intersect, 
           extract(ingr in union | ingr.UniqueId)  AS Union,
           length(intersect) * 1.0 / length(union) AS SimilarityCOF
+ORDER BY  SimilarityCOF DESC
+
+// William Lyon style. 
+// http://gist.neo4j.org/?49a2b9874b37b4a2da4a#_find_most_similar_users_using_jaccard_index
+// This should be better if there are a lot of recipes that don't share an ingredient.
+
+MATCH     (sourceRecipe {UniqueId: "PineappleKaleCoconutOilGreenSmoothie"}), (r2:Recipe) 
+WHERE     sourceRecipe <> r2 
+MATCH     (sourceRecipe)<--(intersection)-->(r2) 
+WITH      sourceRecipe, r2, count(intersection) as intersect 
+MATCH     (sourceRecipe)<--(ingr1) 
+WITH      sourceRecipe, r2, intersect, collect(DISTINCT ingr1) AS coll1 
+MATCH     (r2)<--(ingr2) 
+WITH      sourceRecipe, r2, collect(DISTINCT ingr2) AS coll2, coll1, intersect 
+WITH      sourceRecipe, r2, intersect, length(coll1 + filter(x IN coll2 WHERE NOT x IN coll1)) as union 
+RETURN    r2.UniqueId as Recipe,
+          intersect * 1.0 / union AS SimilarityCOF
 ORDER BY  SimilarityCOF DESC
 
 
